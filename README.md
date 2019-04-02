@@ -1,6 +1,5 @@
 # Raspberry Pi Zero DC and Stepper motor hat
-Creating a more compact version of the Adafruit DC Stepper motor hat, with the goal of 100% compatability. The only real changes are there is no prototyping area, no breakouts of the pi pins, and fewer 3v3, 5v, and GND pins.
-
+Creating a more compact version of the Adafruit DC Stepper motor hat, with the goal of 100% compatability. The only real changes are there is no prototyping area or breakout of the pi pins. Optionally, the four extra PWM pins are now set up to control servos, using a seperate 5V power supply.
 
 Programming with this board should be 100% identical to programming with the original Adafruit design linked below.
 
