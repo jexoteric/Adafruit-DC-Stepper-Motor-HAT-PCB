@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:Rpi Zero Stepper Hat-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -150,53 +151,53 @@ Wire Wire Line
 	10100 800  9800 800 
 Connection ~ 9800 800 
 $Comp
-L power:+12V #PWR0104
+L power:+5V #PWR0104
 U 1 1 5C3E7430
-P 8975 350
-F 0 "#PWR0104" H 8975 200 50  0001 C CNN
-F 1 "+12V" H 8990 523 50  0000 C CNN
-F 2 "" H 8975 350 50  0001 C CNN
-F 3 "" H 8975 350 50  0001 C CNN
-	1    8975 350 
+P 6500 325
+F 0 "#PWR0104" H 6500 175 50  0001 C CNN
+F 1 "+5V" H 6515 498 50  0000 C CNN
+F 2 "" H 6500 325 50  0001 C CNN
+F 3 "" H 6500 325 50  0001 C CNN
+	1    6500 325 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:LED D1
+L Device:LED D2
 U 1 1 5C3E74AB
-P 8975 550
-F 0 "D1" V 9013 432 50  0000 R CNN
-F 1 "GREEN" V 8922 432 50  0000 R CNN
-F 2 "Diode_SMD:D_0805_2012Metric" H 8975 550 50  0001 C CNN
-F 3 "~" H 8975 550 50  0001 C CNN
-	1    8975 550 
+P 6500 525
+F 0 "D2" V 6538 407 50  0000 R CNN
+F 1 "GREEN" V 6447 407 50  0000 R CNN
+F 2 "Diode_SMD:D_0805_2012Metric" H 6500 525 50  0001 C CNN
+F 3 "~" H 6500 525 50  0001 C CNN
+	1    6500 525 
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R9
+L Device:R R10
 U 1 1 5C3E75A6
-P 8975 850
-F 0 "R9" H 9045 896 50  0000 L CNN
-F 1 "1K" H 9045 805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 8905 850 50  0001 C CNN
-F 3 "~" H 8975 850 50  0001 C CNN
-	1    8975 850 
+P 6500 825
+F 0 "R10" H 6570 871 50  0000 L CNN
+F 1 "300" H 6570 780 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6430 825 50  0001 C CNN
+F 3 "~" H 6500 825 50  0001 C CNN
+	1    6500 825 
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0105
 U 1 1 5C3E76B8
-P 8975 1050
-F 0 "#PWR0105" H 8975 800 50  0001 C CNN
-F 1 "GND" H 8980 877 50  0000 C CNN
-F 2 "" H 8975 1050 50  0001 C CNN
-F 3 "" H 8975 1050 50  0001 C CNN
-	1    8975 1050
+P 6500 1025
+F 0 "#PWR0105" H 6500 775 50  0001 C CNN
+F 1 "GND" H 6505 852 50  0000 C CNN
+F 2 "" H 6500 1025 50  0001 C CNN
+F 3 "" H 6500 1025 50  0001 C CNN
+	1    6500 1025
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8975 350  8975 400 
+	6500 325  6500 375 
 Wire Wire Line
-	8975 1000 8975 1050
+	6500 975  6500 1025
 $Comp
 L power:GND #PWR0106
 U 1 1 5C435D2A
@@ -244,21 +245,21 @@ Wire Wire Line
 $Comp
 L Connector:Conn_01x04_Male J3
 U 1 1 5C4A363B
-P 6900 600
-F 0 "J3" H 7006 878 50  0000 C CNN
-F 1 "Conn_01x04_Male" H 7006 787 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 6900 600 50  0001 C CNN
-F 3 "~" H 6900 600 50  0001 C CNN
-	1    6900 600 
+P 4300 550
+F 0 "J3" H 4406 828 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 4406 737 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 4300 550 50  0001 C CNN
+F 3 "~" H 4300 550 50  0001 C CNN
+	1    4300 550 
 	1    0    0    -1  
 $EndComp
-Text GLabel 7100 800  2    50   Input ~ 0
+Text GLabel 4900 750  2    50   Input ~ 0
 PWM15
-Text GLabel 7100 700  2    50   Input ~ 0
+Text GLabel 4900 650  2    50   Input ~ 0
 PWM14
-Text GLabel 7100 600  2    50   Input ~ 0
+Text GLabel 4900 550  2    50   Input ~ 0
 PWM1
-Text GLabel 7100 500  2    50   Input ~ 0
+Text GLabel 4900 450  2    50   Input ~ 0
 PWM0
 $Comp
 L Driver_LED:PCA9685PW U3
@@ -1189,5 +1190,132 @@ F 2 "" H 6000 6400 50  0001 C CNN
 F 3 "" H 6000 6400 50  0001 C CNN
 	1    6000 6400
 	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x25 J6
+U 1 1 5C35A6E0
+P 2125 4625
+F 0 "J6" V 2249 4621 50  0000 C CNN
+F 1 "Conn_01x25" V 2340 4621 50  0000 C CNN
+F 2 "" H 2125 4625 50  0001 C CNN
+F 3 "~" H 2125 4625 50  0001 C CNN
+	1    2125 4625
+	0    1    1    0   
+$EndComp
+Text GLabel 925  4425 1    50   Input ~ 0
+SDA
+Text GLabel 1025 4425 1    50   Input ~ 0
+SCL
+Text GLabel 1125 4425 1    50   Input ~ 0
+TXD
+Text GLabel 1225 4425 1    50   Input ~ 0
+RXD
+Text GLabel 1325 4425 1    50   Input ~ 0
+GPIO4
+Text GLabel 1425 4425 1    50   Input ~ 0
+GPIO17
+Text GLabel 1525 4425 1    50   Input ~ 0
+GPIO18
+Text GLabel 1625 4425 1    50   Input ~ 0
+GPIO27
+Text GLabel 1725 4425 1    50   Input ~ 0
+GPIO22
+Text GLabel 1825 4425 1    50   Input ~ 0
+GPIO23
+Text GLabel 1925 4425 1    50   Input ~ 0
+GPIO24
+Text GLabel 2025 4425 1    50   Input ~ 0
+GPIO25
+Text GLabel 2125 4425 1    50   Input ~ 0
+SPI_MOSI
+Text GLabel 2225 4425 1    50   Input ~ 0
+SPI_MISO
+Text GLabel 2325 4425 1    50   Input ~ 0
+SPI_SCLK
+Text GLabel 2425 4425 1    50   Input ~ 0
+SPI_CE0
+Text GLabel 2525 4425 1    50   Input ~ 0
+SPI_CE1
+Text GLabel 2625 4425 1    50   Input ~ 0
+GPIO5
+Text GLabel 2725 4425 1    50   Input ~ 0
+GPIO6
+Text GLabel 2825 4425 1    50   Input ~ 0
+GPIO12
+Text GLabel 2925 4425 1    50   Input ~ 0
+GPIO13
+Text GLabel 3025 4425 1    50   Input ~ 0
+GPIO16
+Text GLabel 3125 4425 1    50   Input ~ 0
+GPIO19
+Text GLabel 3225 4425 1    50   Input ~ 0
+GPIO20
+Text GLabel 3325 4425 1    50   Input ~ 0
+GPIO21
+$Comp
+L Device:R_Pack04 RN1
+U 1 1 5C63AB68
+P 4700 650
+F 0 "RN1" V 4283 650 50  0000 C CNN
+F 1 "R_Pack04" V 4374 650 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0612" V 4975 650 50  0001 C CNN
+F 3 "~" H 4700 650 50  0001 C CNN
+	1    4700 650 
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5C63BF7E
+P 5475 875
+F 0 "#PWR01" H 5475 625 50  0001 C CNN
+F 1 "GND" H 5480 702 50  0000 C CNN
+F 2 "" H 5475 875 50  0001 C CNN
+F 3 "" H 5475 875 50  0001 C CNN
+	1    5475 875 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_PMOS_GDS Q2
+U 1 1 5C63BF84
+P 5675 775
+F 0 "Q2" H 5880 821 50  0000 L CNN
+F 1 "AOD417" H 5880 730 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:TO-252-2" H 5875 875 50  0001 C CNN
+F 3 "~" H 5675 775 50  0001 C CNN
+	1    5675 775 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5675 475  5475 475 
+Wire Wire Line
+	5475 475  5475 775 
+Wire Wire Line
+	5475 775  5475 875 
+Connection ~ 5475 775 
+Wire Wire Line
+	5775 475  5775 575 
+Wire Wire Line
+	5775 975  5775 1075
+$Comp
+L Connector:Screw_Terminal_01x02 J7
+U 1 1 5C63BF97
+P 5675 275
+F 0 "J7" V 5641 87  50  0000 R CNN
+F 1 "Screw_Terminal_01x02" V 5775 575 50  0000 R CNN
+F 2 "TerminalBlock_4Ucon:TerminalBlock_4Ucon_1x02_P3.50mm_Horizontal" H 5675 275 50  0001 C CNN
+F 3 "~" H 5675 275 50  0001 C CNN
+	1    5675 275 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5C6475B5
+P 5775 1075
+F 0 "#PWR?" H 5775 925 50  0001 C CNN
+F 1 "+5V" H 5790 1248 50  0000 C CNN
+F 2 "" H 5775 1075 50  0001 C CNN
+F 3 "" H 5775 1075 50  0001 C CNN
+	1    5775 1075
+	-1   0    0    1   
 $EndComp
 $EndSCHEMATC
